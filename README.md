@@ -11,8 +11,8 @@ ShopSphere is a fully functional Java-based e-commerce web application demonstra
 ## 📁 Repository Structure
 
 ```
-Repository/
-├── Advanced_JAVA_LAB Experiment/
+Repository (java_project)/
+├── Advanced_JAVA_LAB_Experiment/
 │   ├── LAB_No.1/   → Java Swing GUI — Student Registration Form
 │   ├── LAB_No.2/   → Java Swing MVC Architecture — Calculator App
 │   ├── LAB_No.3/   → JDBC with MySQL — Database Operations
@@ -20,7 +20,10 @@ Repository/
 │   ├── LAB_No.5/   → Java RMI — Remote Calculator (Interface, Impl, Server, Client)
 │   ├── LAB_No.6/   → Servlet Basics — StudentServlet with HTML form
 │   └── LAB_No.7/   → Servlets Advanced — Filters, Listeners, Session, Login Flow
-└── java_project/   → ShopSphere — Complete Java E-Commerce Web Application
+├── src/            → ShopSphere Web Application Source Code
+├── database/       → MySQL Schema & Seed Data
+├── pom.xml         → Maven Build Configuration
+└── README.md       → This file
 ```
 
 ---

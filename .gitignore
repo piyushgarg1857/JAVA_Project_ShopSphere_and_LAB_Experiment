@@ -19,3 +19,9 @@ Thumbs.db
 
 # Local Tomcat context files
 # Keep production JNDI credentials outside the repository.
+
+# Lab Experiment compiled output
+Advanced_JAVA_LAB_Experiment/**/target/
+Advanced_JAVA_LAB_Experiment/**/bin/
+Advanced_JAVA_LAB_Experiment/**/*.class
+Advanced_JAVA_LAB_Experiment/**/lib/*.jar

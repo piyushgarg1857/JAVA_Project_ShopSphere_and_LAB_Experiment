@@ -126,7 +126,7 @@
         <% } %>
     </div>
 </section>
-<section class="editorial-feature">
+<section class="editorial-feature"></section>
     <div class="feature-copy">
         <span class="eyebrow">THE HOME EDIT</span>
         <h2>Designed for everyday living.</h2>
