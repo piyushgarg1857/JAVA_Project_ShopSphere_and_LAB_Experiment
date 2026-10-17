@@ -1,124 +1,244 @@
-# ShopSphere — RTU Advanced Java E-Commerce Project
+# ShopSphere — Advanced Java E-Commerce Project
 
-ShopSphere is an educational Java e-commerce capstone aligned with the RTU Advanced Java project guide. The core application is a layered Jakarta Servlet/JSP web store, with focused Swing, networking, RMI, serialization, JNDI and internationalization modules for syllabus demonstration.
+> **3rd Year Advanced Java Project | RTU Syllabus | B.Tech CSE**
 
-## Project status
+ShopSphere is a fully functional Java-based e-commerce web application demonstrating advanced Java concepts including Servlets, JSP, JDBC, RMI, Sockets, Swing, Serialization, JNDI, and Internationalization.
 
-**Application development and local testing: complete.**  
-**Repository audit and deployment preparation: complete.**  
-**Next stage: hosted deployment.**
+🌐 **Live Demo:** [https://shopsphere-online.azurewebsites.net](https://shopsphere-online.azurewebsites.net)
 
-## Technology
+---
 
-- Java 17 target
-- Jakarta Servlet 6.1 + JSP/JSTL
-- JDBC + MySQL
-- Maven WAR + Apache Tomcat 11
-- Java Swing
-- java.net Socket/ServerSocket
-- Java RMI + RMI Registry
-- JNDI
-- Object serialization
-- Servlet filters/listeners
-- Cookies, EL, JSTL and internationalization
+## 📁 Repository Structure
 
-## Architecture
+```
+Repository/
+├── Experiment-1/        → Servlet Basics & Lifecycle (ServletConfig, ServletContext)
+├── Experiment-2/        → JSP (Declarations, Scriptlets, Expressions, Directives)
+├── Experiment-3/        → JSP Implicit Objects & Session Management
+├── Experiment-4/        → JSTL Core, XML & SQL Tags
+├── Experiment-5/        → JDBC with MySQL (PreparedStatement, ResultSet)
+├── Experiment-6/        → Java Networking (Socket / ServerSocket)
+├── Experiment-7/        → Java RMI (Remote Method Invocation)
+├── Experiment-8/        → Object Serialization & Deserialization
+├── Experiment-9/        → Java Swing (MVC Desktop App)
+├── Experiment-10/       → JNDI (Java Naming and Directory Interface)
+├── Experiment-11/       → Cookies, Session Tracking & Filters
+├── Experiment-12/       → Internationalization (i18n) with Locale & ResourceBundle
+└── ShopSphere/          → Complete Java E-Commerce Web Application (Main Project)
+```
 
-Browser → JSP/HTML/JS → Servlet → Service → DAO → JDBC → MySQL
+---
 
-Advanced modules remain separate from the main shopping workflow:
-- Networking: com.shopsphere.network
-- RMI: com.shopsphere.rmi
-- Serialization: com.shopsphere.serialization
-- Swing: com.shopsphere.desktop
-- JNDI: com.shopsphere.jndi
-- Web infrastructure: com.shopsphere.web
+## 🛒 ShopSphere — Complete Project Details
 
-## Core functionality
+### 📌 Project Overview
 
-Customer:
-- Registration, login/logout and profile
-- Product listing, search, sorting and pagination
-- Product details, reviews and ratings
-- Cart and wishlist
-- Saved addresses
-- Coupons and checkout
-- Local/mock payment recording
-- Order history and customer-owned order details
+ShopSphere is a full-stack e-commerce platform built with Java EE technologies. It supports two user roles — **Customer** and **Admin** — with secure authentication, product management, order processing, and analytics.
 
-Admin:
-- Dashboard
-- Product/category/inventory management
-- Customer management with account safety rules
-- Order management
+### 🛠️ Technology Stack
+
+| Layer | Technology |
+|---|---|
+| Language | Java 17 |
+| Web Framework | Jakarta Servlet 6.1 + JSP/JSTL |
+| Database | MySQL 8 with JDBC |
+| Build Tool | Apache Maven |
+| Server | Apache Tomcat 11 |
+| Desktop Module | Java Swing |
+| Networking | java.net Socket / ServerSocket |
+| RMI | Java RMI + RMI Registry |
+| Directory | JNDI DataSource |
+| Serialization | Java Object Serialization |
+| Security | PBKDF2, CSRF Tokens, Security Headers |
+| Deployment | Azure App Service (WAR) |
+
+### 🏗️ Architecture
+
+```
+Browser → JSP/HTML/JS → Servlet (Controller) → Service Layer → DAO → JDBC → MySQL
+```
+
+**Package Structure:**
+```
+com.shopsphere
+├── dao/           → Data Access Objects (ProductDAO, UserDAO, OrderDAO, WishlistDAO...)
+├── model/         → Entity classes (Product, User, Order, Cart...)
+├── web/           → Servlets (Controllers)
+├── filter/        → Auth, CSRF, Security Headers Filters
+├── security/      → Password hashing, session management
+├── network/       → Socket-based product query server
+├── rmi/           → RMI inventory service & registry
+├── serialization/ → Object serialization demos
+├── desktop/       → Swing MVC desktop dashboard
+└── jndi/          → JNDI DataSource lookup
+```
+
+---
+
+## ✨ Features
+
+### 👤 Customer Features
+- User registration with OTP verification & secure login/logout
+- Product listing with search, filter, sorting & pagination
+- Product details with multi-image gallery, reviews & ratings
+- Shopping cart & wishlist / favourites
+- Saved address management
+- Coupon codes & discount checkout
+- Mock payment recording
+- Order history with invoice download (PDF)
+- Order return & refund requests
+
+### 🔧 Admin Features
+- Dashboard with live statistics
+- Product management (add, edit, enable/disable)
+- Category & inventory management with low-stock alerts
+- Customer account management (suspend / activate)
+- Order management & status updates
 - Review moderation
-- Sales analytics
-- Coupon management
-- Order CSV export
+- Sales analytics with Chart.js (bar, pie, line charts)
+- Coupon creation & management
+- CSV export (sales & inventory) + CSV import for bulk products
 
-## Security and hardening
-
-- PBKDF2 password hashing and password policy
-- PreparedStatement-based JDBC
-- Server-side input validation
-- CSRF same-origin protection
-- Security headers and CSP
-- Authentication/Admin filters
-- Session timeout and cookie-only tracking
-- No-store responses for session-backed requests
+### 🔒 Security Features
+- PBKDF2WithHmacSHA256 password hashing
+- CSRF token protection on all forms
+- Session fixation defense (regenerate session on login)
+- Security headers (CSP, X-Frame-Options, HSTS, etc.)
+- SQL injection prevention via PreparedStatements
 - Login attempt throttling
-- Customer/admin ownership checks
-- DB-backed health endpoint
-- Correlation/request logging
+- Input validation (server-side)
+- Role-based access control (Admin / Customer)
 
-## RTU syllabus demonstrations
+---
 
-- ServletConfig / ServletContext: /syllabus/config-context
-- JSP declarations/scriptlets/expressions: /syllabus/demo/jsp
-- JSP fragments and tag files: /syllabus/demo/components
-- JSTL Core: /syllabus/demo/components
-- JSTL XML: /syllabus/demo/xml
-- JSTL SQL: /syllabus/demo/sql
-- Socket commands: GET_PRODUCT, GET_STOCK, SEARCH_PRODUCT
-- RMI inventory service and registry
-- Serialization
-- Swing MVC
-- URL/URLConnection
-- Locale + ResourceBundle: /language?lang=en or /language?lang=hi
-- JNDI DataSource lookup
-- Applet topic documented as a historical concept, matching the guide
+## 🧪 Lab Experiments (RTU Syllabus Coverage)
 
-## Documentation
+| Experiment | Topic | Code Reference |
+|---|---|---|
+| Experiment-1 | Servlet Lifecycle, ServletConfig, ServletContext | `/syllabus/config-context` |
+| Experiment-2 | JSP Declarations, Scriptlets, Expressions | `/syllabus/demo/jsp` |
+| Experiment-3 | JSP Implicit Objects, Session Tracking | `/syllabus/demo/session` |
+| Experiment-4 | JSTL Core, XML, SQL Tags | `/syllabus/demo/components` |
+| Experiment-5 | JDBC with MySQL | `UserDAO.java`, `ProductDAO.java` |
+| Experiment-6 | Java Networking (Sockets) | `com.shopsphere.network` |
+| Experiment-7 | Java RMI | `com.shopsphere.rmi` |
+| Experiment-8 | Serialization | `com.shopsphere.serialization` |
+| Experiment-9 | Java Swing | `com.shopsphere.desktop` |
+| Experiment-10 | JNDI DataSource | `com.shopsphere.jndi` |
+| Experiment-11 | Cookies, Filters, Listeners | `com.shopsphere.filter` |
+| Experiment-12 | i18n — Locale & ResourceBundle | `/language?lang=hi` |
 
-- Final Audit Report: AUDIT-REPORT.md
-- Deployment Checklist: DEPLOYMENT-CHECKLIST.md
-- Architecture: ARCHITECTURE.md
-- RTU Mapping: RTU-MAPPING.md
-- Final Report: FINAL-REPORT.md
-- Viva Checklist: VIVA-CHECKLIST.md
-- Phase documentation: PHASE6.md, PHASES-8-10.md, PHASES-11-15.md, PHASES-16-20.md, PHASES-21-25.md, PHASES-26-45.md, PHASES-46-60.md
-- Applet History: APPLET-HISTORY.md
+---
 
-## Database
+## ⚙️ Setup & Installation
 
-Import:
-- database/shopsphere.sql
-- database/seed.sql
+### Prerequisites
+- Java 17+
+- Apache Maven 3.8+
+- Apache Tomcat 11
+- MySQL 8
 
-For deployment, configure the Tomcat jdbc/ShopSphereDB JNDI datasource. DBConnection also supports SHOPSPHERE_DB_URL, SHOPSPHERE_DB_USER and SHOPSPHERE_DB_PASSWORD environment variables.
+### 1. Clone Repository
+```bash
+git clone https://github.com/<your-username>/<your-repo>.git
+cd ShopSphere
+```
 
-## Build and test
+### 2. Database Setup
+```bash
+mysql -u root -p
+```
+```sql
+CREATE DATABASE shopsphere;
+USE shopsphere;
+SOURCE database/shopsphere.sql;
+SOURCE database/seed.sql;
+```
 
-mvn clean test package
+### 3. Configure Database Connection
+Set environment variables or edit `db.properties`:
+```
+SHOPSPHERE_DB_URL=jdbc:mysql://localhost:3306/shopsphere
+SHOPSPHERE_DB_USER=root
+SHOPSPHERE_DB_PASSWORD=your_password
+```
 
-The GitHub Actions workflow runs the same Maven verification command.
+### 4. Build & Deploy
+```bash
+mvn clean package
+# Copy target/shopsphere.war to Tomcat webapps/
+```
 
-## Deployment
+### 5. Access Application
+| URL | Description |
+|---|---|
+| `http://localhost:8080/shopsphere/` | Customer storefront |
+| `http://localhost:8080/shopsphere/admin/dashboard` | Admin panel |
+| Default Admin | `admin@shopsphere.com` / `Admin@1234` |
 
-Build target/shopsphere.war and deploy it to Tomcat 11. The repository includes deploy/tomcat/context.xml as the JNDI datasource template.
+---
 
-**Never commit real database credentials.** The deployment template uses CHANGE_ME; configure the real production credential on the server.
+## 🚀 Live Deployment
 
-## Important scope note
+The application is live on **Microsoft Azure App Service**:
 
-The RTU guide's official academic development plan is Phases 1–17. The repository's later numbered hardening batches extend that plan. Payment remains local/mock rather than a live gateway, and the login limiter is intentionally in-memory for this student project.
+🔗 **[https://shopsphere-online.azurewebsites.net](https://shopsphere-online.azurewebsites.net)**
+
+- Hosted on Azure App Service (Linux)
+- MySQL 8 on Azure Database for MySQL Flexible Server
+- Deployed as WAR via GitHub Actions CI/CD pipeline
+- Secured with HTTPS (Azure-managed TLS certificate)
+
+---
+
+## 🗄️ Database Files
+
+| File | Description |
+|---|---|
+| `database/shopsphere.sql` | Full schema (tables, constraints, indexes) |
+| `database/seed.sql` | Sample data (products, categories, users) |
+
+---
+
+## 📄 Documentation
+
+| Document | Description |
+|---|---|
+| `ARCHITECTURE.md` | Detailed architecture & package design |
+| `RTU-MAPPING.md` | RTU syllabus topic-to-code mapping |
+| `FINAL-REPORT.md` | Complete project report |
+| `VIVA-CHECKLIST.md` | Viva preparation checklist |
+| `AUDIT-REPORT.md` | Security audit findings & fixes |
+| `DEPLOYMENT-CHECKLIST.md` | Production deployment steps |
+
+---
+
+## 👨‍💻 Student Details
+
+| Field | Details |
+|---|---|
+| **Name** | *(Your Name)* |
+| **Enrollment No.** | *(Your Enrollment Number)* |
+| **Branch** | B.Tech — Computer Science & Engineering |
+| **Year / Semester** | 3rd Year / 6th Semester |
+| **University** | Rajasthan Technical University (RTU) |
+| **Subject** | Advanced Java Programming |
+| **Faculty** | *(Faculty Name)* |
+
+---
+
+## 📋 Submission
+
+- 🔗 **Google Form:** [Submit GitHub Link Here](https://forms.gle/QPc4Ua1qK3FwrqTg9)
+- 📅 **Evaluation Day:** Wednesday *(Compulsory Attendance — 0 marks if absent)*
+- 👁️ **Repository Visibility:** Public ✅
+
+---
+
+## 📜 License
+
+This project is developed for educational purposes as part of the RTU Advanced Java curriculum.
+
+---
+
+*ShopSphere — Built with ❤️ using Java EE | RTU Advanced Java Project*
