@@ -208,23 +208,13 @@ The application is live on **Microsoft Azure App Service**:
 
 | Field | Details |
 |---|---|
-| **Name** | *(Your Name)* |
-| **Enrollment No.** | *(Your Enrollment Number)* |
-| **Branch** | B.Tech — Computer Science & Engineering |
-| **Year / Semester** | 3rd Year / 6th Semester |
+| **Name** | Piyush Garg |
+| **Roll No.** | 24EGJAD035|
+| **Branch** | B.Tech — Artificial Intelligence & Data science |
+| **Year / Semester** | 3rd Year / 5th Semester |
 | **University** | Rajasthan Technical University (RTU) |
 | **Subject** | Advanced Java Programming |
-| **Faculty** | *(Faculty Name)* |
-
----
-
-## 📋 Submission
-
-- 🔗 **Google Form:** [Submit GitHub Link Here](https://forms.gle/QPc4Ua1qK3FwrqTg9)
-- 📅 **Evaluation Day:** Wednesday *(Compulsory Attendance — 0 marks if absent)*
-- 👁️ **Repository Visibility:** Public ✅
-
----
+| **Faculty** | *Janvi Goyal* |
 
 ## 📜 License
 
