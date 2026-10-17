@@ -12,19 +12,15 @@ ShopSphere is a fully functional Java-based e-commerce web application demonstra
 
 ```
 Repository/
-├── Experiment-1/        → Servlet Basics & Lifecycle (ServletConfig, ServletContext)
-├── Experiment-2/        → JSP (Declarations, Scriptlets, Expressions, Directives)
-├── Experiment-3/        → JSP Implicit Objects & Session Management
-├── Experiment-4/        → JSTL Core, XML & SQL Tags
-├── Experiment-5/        → JDBC with MySQL (PreparedStatement, ResultSet)
-├── Experiment-6/        → Java Networking (Socket / ServerSocket)
-├── Experiment-7/        → Java RMI (Remote Method Invocation)
-├── Experiment-8/        → Object Serialization & Deserialization
-├── Experiment-9/        → Java Swing (MVC Desktop App)
-├── Experiment-10/       → JNDI (Java Naming and Directory Interface)
-├── Experiment-11/       → Cookies, Session Tracking & Filters
-├── Experiment-12/       → Internationalization (i18n) with Locale & ResourceBundle
-└── ShopSphere/          → Complete Java E-Commerce Web Application (Main Project)
+├── Advanced_JAVA_LAB Experiment/
+│   ├── LAB_No.1/   → Java Swing GUI — Student Registration Form
+│   ├── LAB_No.2/   → Java Swing MVC Architecture — Calculator App
+│   ├── LAB_No.3/   → JDBC with MySQL — Database Operations
+│   ├── LAB_No.4/   → Java Networking — Socket / ServerSocket (Client-Server)
+│   ├── LAB_No.5/   → Java RMI — Remote Calculator (Interface, Impl, Server, Client)
+│   ├── LAB_No.6/   → Servlet Basics — StudentServlet with HTML form
+│   └── LAB_No.7/   → Servlets Advanced — Filters, Listeners, Session, Login Flow
+└── java_project/   → ShopSphere — Complete Java E-Commerce Web Application
 ```
 
 ---
@@ -113,20 +109,15 @@ com.shopsphere
 
 ## 🧪 Lab Experiments (RTU Syllabus Coverage)
 
-| Experiment | Topic | Code Reference |
+| Lab | Topic | Key Files |
 |---|---|---|
-| Experiment-1 | Servlet Lifecycle, ServletConfig, ServletContext | `/syllabus/config-context` |
-| Experiment-2 | JSP Declarations, Scriptlets, Expressions | `/syllabus/demo/jsp` |
-| Experiment-3 | JSP Implicit Objects, Session Tracking | `/syllabus/demo/session` |
-| Experiment-4 | JSTL Core, XML, SQL Tags | `/syllabus/demo/components` |
-| Experiment-5 | JDBC with MySQL | `UserDAO.java`, `ProductDAO.java` |
-| Experiment-6 | Java Networking (Sockets) | `com.shopsphere.network` |
-| Experiment-7 | Java RMI | `com.shopsphere.rmi` |
-| Experiment-8 | Serialization | `com.shopsphere.serialization` |
-| Experiment-9 | Java Swing | `com.shopsphere.desktop` |
-| Experiment-10 | JNDI DataSource | `com.shopsphere.jndi` |
-| Experiment-11 | Cookies, Filters, Listeners | `com.shopsphere.filter` |
-| Experiment-12 | i18n — Locale & ResourceBundle | `/language?lang=hi` |
+| **LAB_No.1** | Java Swing GUI — Student Registration Form | `StudentRegistration.java` |
+| **LAB_No.2** | Java Swing MVC Architecture — Calculator | `ModelsCalculator.java`, `ViewsCalculator.java`, `ControllerCalculator.java`, `RunCalculator.java` |
+| **LAB_No.3** | JDBC with MySQL — Database CRUD Operations | `LAB_No.3/jdbc/src/` (JDBC demo) |
+| **LAB_No.4** | Java Networking — Socket / ServerSocket | `server.java`, `client.java` |
+| **LAB_No.5** | Java RMI — Remote Method Invocation | `Calculator.java`, `CalculatorImpl.java`, `Server.java`, `Client.java` |
+| **LAB_No.6** | Servlet Basics — Form Handling | `StudentServlet.java`, `index.html` |
+| **LAB_No.7** | Servlets Advanced — Filters, Listeners, Session, Login | `AuthFilter.java`, `AppListener.java`, `HomeServlet.java`, `LoginServletextends.java` |
 
 ---
 
