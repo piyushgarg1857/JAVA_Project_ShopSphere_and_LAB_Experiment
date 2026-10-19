@@ -13,14 +13,14 @@ public final class DBConnection {
  public static Connection getConnection()throws SQLException{
   String envUrl=System.getenv("SHOPSPHERE_DB_URL");
   if(envUrl!=null&&!envUrl.isBlank()){
-   String user=required("SHOPSPHERE_DB_USER","root"),password=required("SHOPSPHERE_DB_PASSWORD","root");
+   String user=required("SHOPSPHERE_DB_USER","root"),password=required("SHOPSPHERE_DB_PASSWORD","piyush");
    return DriverManager.getConnection(envUrl,user,password);
   }
   DataSource ds=lookupDataSource();
   if(ds!=null){
    try{ return ds.getConnection(); }catch(SQLException ignored){}
   }
-  String url=required("SHOPSPHERE_DB_URL",DEFAULT_URL),user=required("SHOPSPHERE_DB_USER","root"),password=required("SHOPSPHERE_DB_PASSWORD","root");
+  String url=required("SHOPSPHERE_DB_URL",DEFAULT_URL),user=required("SHOPSPHERE_DB_USER","root"),password=required("SHOPSPHERE_DB_PASSWORD","piyush");
   return DriverManager.getConnection(url,user,password);
  }
  private static DataSource lookupDataSource(){if(dataSource!=null)return dataSource;try{dataSource=(DataSource)new InitialContext().lookup("java:comp/env/jdbc/ShopSphereDB");return dataSource;}catch(NamingException ignored){return null;}}
